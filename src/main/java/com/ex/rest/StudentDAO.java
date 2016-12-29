@@ -50,6 +50,17 @@ public class StudentDAO {
         }
 
     }
+    public void delStuds(int id)
+    {
+        try
+        {
+            PreparedStatement st=conn.prepareStatement("DELETE FROM student WHERE id=?");
+            st.setInt(1,id);
+            st.execute();
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+    }
 
 
 

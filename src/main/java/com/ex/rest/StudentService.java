@@ -26,10 +26,18 @@ public class StudentService {
 
     @PUT
     @Path("/students")
-    @Consumes(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_JSON)
     public void putStudents(Student stu)
     {
         sdao.putStuds(stu);
     }
+
+    @DELETE
+    @Path("/students/{stuid}")
+    public void delstudents(@PathParam("stuid")int id)
+    {
+        sdao.delStuds(id);
+    }
+
 
 }
