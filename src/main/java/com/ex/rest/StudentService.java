@@ -24,5 +24,12 @@ public class StudentService {
             return sdao.getStuds();
         }
 
+    @PUT
+    @Path("/students")
+    @Consumes(MediaType.APPLICATION_XML)
+    public void putStudents(Student stu)
+    {
+        sdao.putStuds(stu);
+    }
 
 }

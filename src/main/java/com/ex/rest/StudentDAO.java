@@ -39,6 +39,19 @@ public class StudentDAO {
     }
 
 
+    public void putStuds(Student stu) {
+        try{
+            PreparedStatement st=conn.prepareStatement("INSERT INTO student VALUES(?,?)");
+            st.setInt(1,stu.getId());
+            st.setString(2,stu.getName());
+            st.execute();
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+
+    }
+
+
 
 
 
