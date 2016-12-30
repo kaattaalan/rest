@@ -18,7 +18,7 @@ public class StudentService {
 
         @GET
         @Path("/students")
-        @Produces(MediaType.APPLICATION_XML)
+        @Produces(MediaType.APPLICATION_JSON)
         public List<Student> getStudents()
         {
             return sdao.getStuds();

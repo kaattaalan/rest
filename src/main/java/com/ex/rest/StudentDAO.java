@@ -21,7 +21,6 @@ public class StudentDAO {
     }
     public List<Student> getStuds() {
        List<Student> list=new ArrayList<Student>();
-        list.add(new Student(111,"Chathan"));
         try{
 
             Statement st=conn.createStatement();
